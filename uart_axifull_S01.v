@@ -1,4 +1,4 @@
-module uart_axifull_v1_0_S01_AXI #(
+module uart_axifull_S01 #(
     // Users to add parameters here
     // MBA START
     parameter c_clkfreq = 100_000_000,
