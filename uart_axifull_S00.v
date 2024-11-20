@@ -1,4 +1,4 @@
-module uart_axifull_v1_0_S00_AXI #(
+module uart_axifull_S00 #(
     parameter C_S_AXI_DATA_WIDTH = 32,
     parameter C_S_AXI_ADDR_WIDTH = 4
 )(
