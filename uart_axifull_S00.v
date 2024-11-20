@@ -156,5 +156,18 @@ end
             // Master veriyi kabul etti
             axi_rvalid <= 1'b0;
         end
+
+        always @(posedge S_AXI_ACLK) begin
+    if (S_AXI_ACLK) begin
+        slv_reg1_prev <= slv_reg1;
+        sent_trig_o <= 1'b0;
+
+        if (slv_reg1_prev == 32'h00000000 && slv_reg1 == 32'h000000BA) begin
+            data_length_o <= slv_reg0[9:0];
+            sent_trig_o <= 1'b1;
+        end
+    end
+end
+
     end
 end
